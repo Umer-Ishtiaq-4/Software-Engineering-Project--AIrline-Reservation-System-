@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="sign-form-div">
+    <div class="center-form">
+
+        <form action="/sign-up" method="POST">
+            <h1 class="main-heading"><b>Register Yourself</b></h1>
+            <div class="form-floating">
+                <label for="floatingInput"><b>CNIC</b></label>
+                <input type="text" class="form-control" id="cnci" name="cnic" placeholder="ID card">
+            </div>
+            <div class="form-floating">
+                <label for="floatingInput"><b>Name</b></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="John etc">
+
+            </div>
+            <div class="form-floating">
+                <label for="floatingInput"><b>Username</b></label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="John etc">
+
+            </div>
+            <div class="form-floating">
+                <label for="floatingInput"><b>Email</b></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="airline@gmail.com">
+
+            </div>
+            <div class="form-floating">
+                <label for="floatingPassword"><b>Password</b></label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="********">
+
+            </div>
+            <div class="checkbox mb-2">
+            </div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+            <div class="checkbox mb-3">
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+            <div class="copy">
+                <!-- mt-3 text-muted -->
+                <p class=""><b>&copy; 2017–2021</b></p>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock body %}

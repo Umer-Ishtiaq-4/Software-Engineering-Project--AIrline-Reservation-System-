@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Airlines</title>
+</head>
+
+<body>
+    <div class="Seat-Book-body1">
+        <div class="nav">
+            <ul>
+                <!-- <li> <a class="navbar-brand" href="#">Navbar</a>
+        </li> -->
+                <li><a class="Brand" href="/"><b>S@T</b></a></li>
+                <!-- <li><a href="/">Home</a></li> -->
+                <li><a href="/login">Login</a></li>
+                <li><a href="/sign-up">Sign Up</a></li>
+                <li><a href="/seat-book">Book</a></li>
+                <li style="float:right"><a class="about" href="/about">About</a></li>
+            </ul>
+        </div>
+        {% block body %}
+
+        <div class="h1-home">
+            <div class="wrap-box12">
+                <a href="/login" style="text-decoration:none">
+                    <div class="box1">Login -></div>
+                </a>
+                <a href="/sign-up" style="text-decoration:none">
+                    <div class="box2">Register Yourself</div>
+                </a>
+            </div>
+            <!-- <div class="heading">
+                Airline Reservation System <br>
+                Register Your self to book a Flight
+            </div>
+            <br> -->
+            <!-- Register Your self to book a Flight -->
+        </div>
+        {% endblock body %}
+        <footer>
+            <div class="foot">
+                <div class="reg">
+                    Register Yourself to Book Flight
+                </div>
+                <div class="button">
+                    <button onclick="window.location.href='/sign-up'" type="button" class="butt1">Sign In</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

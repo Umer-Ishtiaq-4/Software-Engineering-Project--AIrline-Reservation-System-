@@ -1,0 +1,39 @@
+/* * {
+  margin: 0;
+  padding: 0;
+}
+.h1-home {
+  height: 93vh;
+  width: 100%;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Birthstone", cursive;
+  font-size: 100px;
+}
+.foot {
+  background-color: #333;
+  color: white;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg {
+  margin-right: 20px;
+}
+.butt1 {
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border-radius: 18px;
+  border-style: none;
+  transition: 400ms ease-in-out;
+}
+.butt1:hover {
+  background-color: black;
+  transition: 200ms ease-in;
+  color: white;
+ 
+} */

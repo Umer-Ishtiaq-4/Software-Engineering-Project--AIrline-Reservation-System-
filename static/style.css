@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+/* .navbar-brand {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+} */
+.button-seatbook {
+  margin-top: 5px;
+}
+
+.flashes {
+  color: white;
+  width: 350px;
+}
+ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+li a:hover {
+  transition: 400ms;
+  background-color: #111;
+  text-decoration: none;
+}
+
+.about:hover {
+  transition: 400ms;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.Brand:hover {
+  transition: 400ms;
+  background-color: #111;
+  color: rgb(203, 216, 25);
+  text-decoration: none;
+}
+.form-div {
+  padding-left: 92px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  height: 85vh;
+  width: 100%;
+  /* background-image: url("https://source.unsplash.com/1600x900/?airline,aeroplane"); */
+  background-image: url("gb-img.jpg");
+  /* background-size: 300px; */
+  /* background-size: no-repeat; */
+}
+.sign-form-div {
+  /* padding-left: 92px;
+  padding-top: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  width: 100%;
+  background-image: url(airline1.jpg);
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* .center-form {
+  width: 200px;
+} */
+.main-heading {
+  margin-bottom: 20px;
+  font-family: "Birthstone", cursive;
+  font-size: 50px;
+}
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  text-align: center;
+  max-width: 70vw;
+}
+.wrap-about {
+  height: 85vh;
+}
+.h1-home {
+  height: 85vh;
+  width: 100%;
+  background-image: url("airline3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Birthstone", cursive;
+  font-size: 100px; */
+}
+.h1-about {
+  height: 85vh;
+  width: 100%;
+  background-image: url("airline3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48 61 72);
+  color: white;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: 200ms;
+}
+.box1:hover {
+  transition: 200ms;
+  padding-right: 0px;
+  padding-left: 15px;
+}
+
+.box2 {
+  color: white;
+  text-align: center;
+  background-color: rgb(161 67 16);
+  padding: 5px 20px 5px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: 200ms;
+}
+.box2:hover {
+  transition: 200ms;
+  background-color: rgb(210 106 49);
+  transition: 200ms;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.foot {
+  background-color: #333;
+  color: white;
+  height: 8vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg {
+  margin-right: 20px;
+}
+.butt1 {
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border-radius: 18px;
+  border-style: none;
+  transition: 400ms ease-in-out;
+}
+.butt1:hover {
+  background-color: black;
+  transition: 200ms ease-in;
+  /* -webkit-transition: color 2s; */
+  /* -o-transition: 200ms ease-in; */
+  /* -o-transition: 3s linear; */
+  color: white;
+  /* margin-bottom: 5px; */
+}
+
+/* seat book  */
+.wrap {
+  max-width: 100%;
+  max-height: 83vh;
+}
+
+.Seat-Book-body {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(/static/aircraft.jpg);
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+}
+
+.Booking-Form-Box {
+  max-width: 350px;
+  border: 2px solid #ced4da;
+  margin: 10% auto 0;
+  /* margin-top: 50px; */
+}
+.radio-btn {
+  margin: 0 20px;
+}
+.radio-btn .btn {
+  margin: 20px 10px 20px 0;
+  box-shadow: none;
+}
+.radio-btn .btn::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  top: -2px;
+  left: -1px;
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  border: 3px solid #fff;
+  visibility: visible;
+  border-radius: 50%;
+}
+.radio-btn .btn:checked::after {
+  content: "";
+  background-color: #000;
+  transition: 0.5s;
+}
+.radio-btn span {
+  color: #fff;
+  margin-right: 7px;
+  font-size: 14px;
+}
+.Booking-form {
+  padding: 0 280px 250px;
+  margin-top: 40px;
+}
+
+.Booking-form label {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #000 !important;
+}
+:-ms-input-placeholder {
+  color: #000 !important;
+}
+
+.input-grp {
+  width: 130px;
+  display: inline-block;
+}
+
+.form-control {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  color: #000 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+.select-date::-webkit-inner-spin-button,
+.select-date::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.select-date::-webkit-calender-picker-indicator {
+  background: #fff !important;
+}
+
+.custom-select {
+  color: #000 !important;
+  font-size: 14px !important;
+  border: 1px solid #ced4da !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+}
+.custom-select option {
+  color: #333;
+}
+
+.flight {
+  width: 100%;
+  padding: 9px 0;
+  font-size: 14px;
+  border: 1px solid #ced4da !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.flight:hover {
+  background: #fff !important;
+  color: #000 !important;
+  transition: 0.5s;
+}
+
+#flight_check {
+  margin-top: 15px;
+}
+
+.Button-Details {
+  color: white;
+}

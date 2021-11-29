@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <title>Book Flight</title>
+</head>
+
+<body class=Seat-Book-body>
+    <div class="nav">
+        <ul>
+            <!-- <li> <a class="navbar-brand" href="#">Navbar</a>
+        </li> -->
+            <li><a class="Brand" href="/"><b>S@T</b></a></li>
+            <!-- <li><a href="/">Home</a></li> -->
+            <!-- <li><a href="/logout">Logout</a></li> -->
+            <li><a href="/seat-book">Book</a></li>
+            <li style="float:right">
+                <div class="button-seatbook">
+                    <button onclick="window.location.href='/logout'" type="button" class="butt1">Logout</button>
+                </div>
+            </li>
+            <li style="float:right"><a class="about" href="/about">About</a></li>
+        </ul>
+        <div class="wrap">
+
+            <div class="Booking-Form-Box">
+                <div class="radio-btn">
+                    <input type="radio" class="btn" name="check" checked="checked"><span>Round Trip</span>
+                    <input type="radio" class="btn" name="check"><span>One way</span>
+                    <input type="radio" class="btn" name="check"><span>Multy-City</span>
+                </div>
+            </div>
+            <form action="/flight_check" method="POST">
+                <div class="Booking-form">
+                    <div class="input-grp">
+                        <label>Travel From</label>
+                        <select class="custom-select" id="custom-select-from" name="custom-select-from">
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                            <option value="Karachi">Karachi</option>
+                        </select>
+                    </div>
+                    <!-- <br> -->
+                    <div class="input-grp">
+                        <label>Travel To</label>
+                        <select class="custom-select" id="custom-select-to" name="custom-select-to">
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                            <option value="Karachi">Karachi</option>
+                        </select>
+                    </div>
+                    <!-- <input type="text" class="form-control" placeholder="City or Airport"> -->
+                    <div class="input-grp">
+                        <label>Departing</label>
+                        <input type="date" class=" form-control select-date">
+                    </div>
+
+                    <div class="input-grp">
+                        <label>Returning</label>
+                        <input type="date" class=" form-control select-date">
+                    </div>
+
+                    <div class="input-grp">
+                        <label>Adults</label>
+                        <input type="number" class=" form-control" value="1">
+                    </div>
+
+                    <div class="input-grp">
+                        <label>Children</label>
+                        <input type="number" class=" form-control" value="0">
+                    </div>
+
+                    <div class="input-grp">
+                        <label>Travel Class</label>
+                        <select class="custom-select">
+                            <option value="1">First Class</option>
+                            <option value="2">Buisness Class</option>
+                            <option value="3">Economy Class</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="flight_check">Book seats</button>
+                    <a href="/Dec-flight">
+                        <button type="button" class="btn btn-secondary" id="flight_check">Cancel seats</button>
+                    </a>
+
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <ul class=flashes>
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% endwith %}
+                    <!-- <div class="input-grp">
+                        <div class="flight_chk">
+                            <button type="button" class="btn btn-primary flight"><a style="text-decoration:none">
+                                    Check seats</a></button>
+                        </div>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div class="foot">
+                <div class="reg">
+                    SHAHEE TRAVELS
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
